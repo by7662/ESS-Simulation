@@ -5,6 +5,6 @@
  */
 
 /**
- * Enum of Strategy type
+ * Enum of src.Strategy type
  */
 public enum Strategy {Hawk, Dove, DEAD}

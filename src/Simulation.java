@@ -29,7 +29,7 @@ public class Simulation {
     }
 
     /**
-     * Populating HashMap with an ID as key and Individual class as value
+     * Populating HashMap with an ID as key and src.Individual class as value
      */
     public void insertIndividual() {
         for (int i = 0; i < numHawk; i++) {
@@ -60,7 +60,7 @@ public class Simulation {
     public void displayIndividual() {
         System.out.println(" ");
         for (int i = 0; i < popSize; i++) {
-            System.out.println("Individual[" + i + "]=" + individual.get(i).getStrategy() + ":" + individual.get(i).getResources());
+            System.out.println("src.Individual[" + i + "]=" + individual.get(i).getStrategy() + ":" + individual.get(i).getResources());
         }
         System.out.println("Living: " + alive + "\n");
         printMenu();
@@ -114,8 +114,8 @@ public class Simulation {
             int b = IDs.get(1);
             Strategy strategy1 = individual.get(a).getStrategy();
             Strategy strategy2 = individual.get(b).getStrategy();
-            System.out.println("Individual " + a + ": " + strategy1);
-            System.out.println("Individual " + b + ": " + strategy2);
+            System.out.println("src.Individual " + a + ": " + strategy1);
+            System.out.println("src.Individual " + b + ": " + strategy2);
             if (strategy1.equals(Strategy.Hawk) && strategy2.equals(Strategy.Hawk)) {
                 System.out.println("Hawk/Hawk: Hawk: " + (resources - cost) + "\tHawk: " + (-cost));
                 individual.get(a).setResources(individual.get(a).getResources() + (resources - cost));
@@ -141,11 +141,11 @@ public class Simulation {
                 individual.get(b).setDead(true);
                 alive -= 1;
             }
-            System.out.println("Individual " + a + ": " + individual.get(a).getResources() + "\tIndividual " + b + ": " + individual.get(b).getResources());
+            System.out.println("src.Individual " + a + ": " + individual.get(a).getResources() + "\tsrc.Individual " + b + ": " + individual.get(b).getResources());
             System.out.println(" ");
             INTERACTION += 1;
         } else {
-            System.err.println("Simulation is terminated. Number of alive individuals is less than one.");
+            System.err.println("src.Simulation is terminated. Number of alive individuals is less than one.");
             System.exit(0);
         }
     }

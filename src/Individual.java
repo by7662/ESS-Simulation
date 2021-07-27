@@ -16,16 +16,16 @@ public class Individual implements Comparable{
     }
 
     /**
-     * Getter for Strategy
-     * @return Strategy
+     * Getter for src.Strategy
+     * @return src.Strategy
      */
     public Strategy getStrategy() {
         return strategy;
     }
 
     /**
-     * Check if the Strategy of the Individual is dead.
-     * @return true if Strategy's resource amount is below 0, false otherwise
+     * Check if the src.Strategy of the src.Individual is dead.
+     * @return true if src.Strategy's resource amount is below 0, false otherwise
      */
     public boolean isDead() {
         return isDead;
@@ -40,8 +40,8 @@ public class Individual implements Comparable{
     }
 
     /**
-     * Setter whether the Strategy is dead
-     * @param dead true if Strategy's resource amount is below 0, false otherwise
+     * Setter whether the src.Strategy is dead
+     * @param dead true if src.Strategy's resource amount is below 0, false otherwise
      */
     public void setDead(boolean dead) {
         isDead = dead;
@@ -59,8 +59,8 @@ public class Individual implements Comparable{
     }
 
     /**
-     * Setter for the Strategy for the Individual. Used for changing Strategy to DEAD when its resources amount is below 0
-     * @param strategy Enum of the Strategy to change into
+     * Setter for the src.Strategy for the src.Individual. Used for changing src.Strategy to DEAD when its resources amount is below 0
+     * @param strategy Enum of the src.Strategy to change into
      */
     public void setStrategy(Strategy strategy) {
         this.strategy = strategy;
